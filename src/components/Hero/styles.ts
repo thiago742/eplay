@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { TagContainer } from '../Tag/styles'
+import { breakpoints } from '../../styles'
 
 export const Banner = styled.div`
   display: block;
@@ -12,6 +13,10 @@ export const Banner = styled.div`
   background-size: 100%;
 
   padding-top: 16px;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    background-size: cover;
+  }
 
   &::after {
     position: absolute;
